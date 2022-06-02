@@ -11,10 +11,6 @@ app.use(express.json())
 // mongo.connect();
 mongo.connectMongoose();
 
-app.use('/',(req,res,next) =>{
-    // console.log("Middle Ware")
-    next();
-})
 app.use('/hallBooking', hallBookingRouter)
 
 const port = process.env.PORT || 3000
